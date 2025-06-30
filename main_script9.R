@@ -312,6 +312,105 @@ saveRDS(results_250, file.path(output_dir, "data_50_4_9.rds"))
 
 
 
+
+results_275 <- data.frame(
+  Run = integer(),
+  N_c = integer(),
+  Length = numeric(),
+  Cost = numeric(),
+  NumDisambigs = integer()
+)
+
+
+for (i in 1:100) {
+  set.seed(400+i)
+  obs_gen_para <- c(gamma = 0.3, d = 5, noPoints = 275)
+  result <- DT_Alg_C(obs_gen_para, lambda)
+  
+  results_275[i, ] <- list(
+    Run = i,
+    N_c = 275,
+    Length = result$Length_total,
+    Cost = result$Cost_total,
+    NumDisambigs = length(result$Disambiguate_state)
+  )
+}
+
+saveRDS(results_275, file.path(output_dir, "data_50_4_10.rds"))
+
+
+
+
+
+
+results_300 <- data.frame(
+  Run = integer(),
+  N_c = integer(),
+  Length = numeric(),
+  Cost = numeric(),
+  NumDisambigs = integer()
+)
+
+
+for (i in 1:100) {
+  set.seed(400+i)
+  obs_gen_para <- c(gamma = 0.3, d = 5, noPoints = 300)
+  result <- DT_Alg_C(obs_gen_para, lambda)
+  
+  results_300[i, ] <- list(
+    Run = i,
+    N_c = 300,
+    Length = result$Length_total,
+    Cost = result$Cost_total,
+    NumDisambigs = length(result$Disambiguate_state)
+  )
+}
+
+saveRDS(results_300, file.path(output_dir, "data_50_4_11.rds"))
+
+
+
+
+
+
+
+
+results_325 <- data.frame(
+  Run = integer(),
+  N_c = integer(),
+  Length = numeric(),
+  Cost = numeric(),
+  NumDisambigs = integer()
+)
+
+
+for (i in 1:100) {
+  set.seed(400+i)
+  obs_gen_para <- c(gamma = 0.3, d = 5, noPoints = 325)
+  result <- DT_Alg_C(obs_gen_para, lambda)
+  
+  results_325[i, ] <- list(
+    Run = i,
+    N_c = 325,
+    Length = result$Length_total,
+    Cost = result$Cost_total,
+    NumDisambigs = length(result$Disambiguate_state)
+  )
+}
+
+saveRDS(results_325, file.path(output_dir, "data_50_4_12.rds"))
+
+
+
+
+
+
+
+
+
+
+
+
 # Combine all results into one table
 results <- results_50
 
