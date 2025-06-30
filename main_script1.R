@@ -40,7 +40,7 @@ results_25 <- data.frame(
 for (i in 1:100) {
   set.seed(400+i)
   obs_gen_para <- c(gamma = 0.3, d = 5, noPoints = 50, no_c = 25, no_o = 25)
-  result <- DT_Alg_M(obs_gen_para, kei = 10, lambda)
+  result <- DT_Alg_M(obs_gen_para, lambda)
   
   results_25[i, ] <- list(
     Run = i,
@@ -70,7 +70,7 @@ results_50 <- data.frame(
 for (i in 1:100) {
   set.seed(400+i)
   obs_gen_para <- c(gamma = 0.3, d = 5, noPoints = 75, no_c = 25, no_o = 50)
-  result <- DT_Alg_M(obs_gen_para, kei = 10, lambda)
+  result <- DT_Alg_M(obs_gen_para, lambda)
   
   results_50[i, ] <- list(
     Run = i,
@@ -100,7 +100,7 @@ results_75 <- data.frame(
 for (i in 1:100) {
   set.seed(400+i)
   obs_gen_para <- c(gamma = 0.3, d = 5, noPoints = 100, no_c = 25, no_o = 75)
-  result <- DT_Alg_M(obs_gen_para, kei = 10, lambda)
+  result <- DT_Alg_M(obs_gen_para, lambda)
   
   results_75[i, ] <- list(
     Run = i,
@@ -131,7 +131,7 @@ results_100 <- data.frame(
 for (i in 1:100) {
   set.seed(400+i)
   obs_gen_para <- c(gamma = 0.3, d = 5, noPoints = 125, no_c = 25, no_o = 100)
-  result <- DT_Alg_M(obs_gen_para, kei = 10, lambda)
+  result <- DT_Alg_M(obs_gen_para, lambda)
   
   results_100[i, ] <- list(
     Run = i,
@@ -162,7 +162,7 @@ results_125 <- data.frame(
 for (i in 1:100) {
   set.seed(400+i)
   obs_gen_para <- c(gamma = 0.3, d = 5, noPoints = 150, no_c = 25, no_o = 125)
-  result <- DT_Alg_M(obs_gen_para, kei = 10, lambda)
+  result <- DT_Alg_M(obs_gen_para, lambda)
   
   results_125[i, ] <- list(
     Run = i,
